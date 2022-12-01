@@ -164,4 +164,20 @@ As the sample increases the standard deviation gets smaller while the mean remai
 
 
 
+```{r}
+numb = 36
+Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+my1000$k4 = x.avg
+p <- ggplot(my1000, aes(x=k4),col=sex) + 
+  geom_density() +
+# Add mean line
+ geom_vline(aes(xintercept=mean(k4)),
+            color="blue", linetype="dashed", size=1)
+p + ggtitle("n = 36") +
+  xlab("temperature") + ylab(" density")
+print(paste('mean = ', mean(my1000$k4),' sd = ',sd(my1000$k4)))
+```
+As the sample increases the standard deviation gets smaller while the mean remains the same. With numb=36 the mean is 49.8268333333333 and the standard deviation is 6.76612606869023. The mean is close to 50 and the standard deviation is 7 meaning it makes sense.
 
