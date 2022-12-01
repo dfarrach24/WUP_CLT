@@ -1,12 +1,12 @@
 ---
 title: "CLT_WUP"
-author: "Your Name"
+author: "Danitza Nunez"
 output: 
   html_document:
     number_sections: true
     toc: true
     toc_depth: 5
-date: "`r Sys.Date()`"    
+date: "November 30,2022"    
     
 ---
 
@@ -41,6 +41,19 @@ p+ geom_vline(aes(xintercept=mean(kkardashtemp)),
             color="blue", linetype="dashed", size=1)
 print(paste('mean = ', mean(my1000$kkardashtemp),' sd = ',sd(my1000$kkardashtemp)))
 ```
+
+```
+## We expect the sample mean to be close to population and the standev to get smaller by the ratio of one to the sample size. In this case 1/sqrt(2)
+
+There are 3 peaks in the density plot. You pick two people you can get MM,MF.FM,or FF. these are all equally likey so the little peak on left is all the FF's while the little peak on the right is all the MM's so the big one in the middle is both the MF and FM in the same bag so-to-speak.  
+
+
+## We expect the sample mean to be close to population and the standev to get smaller by the ratio of one to the sample size. In this case 1/sqrt(2)
+
+
+```{r}
+
+
 
 ```{r}
 numb=2
@@ -84,6 +97,12 @@ print(paste('mean = ', mean(my1000$k4),' sd = ',sd(my1000$k4)))
 
 ```
 
-### In this case the stdev was cut in half because the sample size was four. This is what the central limit theorem says. There are also 5 peaks. They go from FFFF,to FFFM, to FFMM to FMMM and finally MMMM.
+
+As the sample increases the standard deviation gets smaller while the mean remains the same. With numb=4 the mean is 49.753 and the standard deviation is 20.6980409676834. The mean is close to 50 and the standard deviation is 21 meaning it makes sense.
+
+In this case the studv was cut in half because the sample size was four. This is what the central limit theorem says. There are also 5 peaks. They go from FFFF,to FFFM, to FFMM to FMMM and finally MMMM.
+
+In this case the stdev was cut in half because the sample size was four. This is what the central limit theorem says. There are also 5 peaks. They go from FFFF,to FFFM, to FFMM to FMMM and finally MMMM.
 
 # Now finish by adding blocks with numb being 9, then 16, 25, and 36. be sure to mention how the standard deviation progresses as the sample size changes,
+
